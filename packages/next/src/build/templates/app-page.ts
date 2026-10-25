@@ -1467,7 +1467,7 @@ export async function handler(
 
       // In dev, we should not cache pages for any reason.
       if (routeModule.isDev) {
-        res.setHeader('Cache-Control', 'no-cache, must-revalidate')
+        res.setHeader('Cache-Control', 'no-store')
       }
 
       if (!cacheEntry) {

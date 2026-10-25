@@ -1807,7 +1807,7 @@ export default abstract class Server<
 
       // In dev, we should not cache pages for any reason.
       if (this.dev) {
-        res.setHeader('Cache-Control', 'no-cache, must-revalidate')
+        res.setHeader('Cache-Control', 'no-store')
         cacheControl = undefined
       }
 
